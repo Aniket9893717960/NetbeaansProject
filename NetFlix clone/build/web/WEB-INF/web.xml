@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <servlet>
+        <servlet-name>loginChecker</servlet-name>
+        <servlet-class>checker.loginChecker</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registrationAuthentictor</servlet-name>
+        <servlet-class>Authenticator.registrationAuthentictor</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registrationChecker</servlet-name>
+        <servlet-class>checker.registrationChecker</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginChecker</servlet-name>
+        <url-pattern>/loginChecker</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrationAuthentictor</servlet-name>
+        <url-pattern>/registrationAuthentictor</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registrationChecker</servlet-name>
+        <url-pattern>/registrationChecker</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>Login Page.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
